@@ -1,12 +1,30 @@
+/* MAIN BOX */
 .navbar-box {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: white;
   display: flex;
-  justify-content: space-around;
-  padding: 2rem;
+  align-items: center; /* Esto centra verticalmente */
+  padding: 1rem;
   z-index: 1000;
+}
+
+/* OWNER */
+.navbar-box-owner {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-left: 3rem;
+}
+
+/* NAVIGATION */
+.navbar-box-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar-box-content {
@@ -16,8 +34,23 @@
   padding: 0;
 }
 
-.navbar-box-content a {
-  color: black;
+.navbar-buttons {
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
   cursor: pointer;
-  user-select: none;
+  background-color: transparent;
+  outline: none !important; /* Elimina el contorno al enfocar */
+  box-shadow: none !important; /* Elimina cualquier sombra al hacer clic */
+}
+
+/* SOCIAL */
+.navbar-box-social {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  margin-right: 3rem;
 }

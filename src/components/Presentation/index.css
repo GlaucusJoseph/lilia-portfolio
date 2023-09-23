@@ -1,0 +1,20 @@
+/* MAIN BOX */
+.presentation-box {
+  display: flex;
+  justify-content: space-between; /* Espacio entre las imágenes y el texto */
+  align-items: center; /* Centra verticalmente los elementos */
+  margin-top: 10rem;
+}
+
+/* Asegura que las imágenes se ajusten al ancho máximo del contenedor */
+.left-image img,
+.right-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilo adicional según sea necesario */
+.text-section {
+  background-color: white;
+  flex: 1; /* Toma el espacio restante disponible */
+}
