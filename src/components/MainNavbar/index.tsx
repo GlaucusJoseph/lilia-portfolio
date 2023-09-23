@@ -1,20 +1,8 @@
-import { useEffect, useState } from "react";
 import "./index.css";
 import { InstagramIcon } from "../../assets/svg";
 
-const occupations = [
-  "Marketing Specialist",
-  "Emmy Award winner",
-  "Content Creator",
-  /*  "Journalist",
-  "Producer",
-  "Model",
-  "Artist",
-  "Photographer", */
-];
-
 const MainNavbar = () => {
-  const [liliaDescription, setLiliaDescription] = useState(
+  /*   const [liliaDescription, setLiliaDescription] = useState(
     "Marketing Specialist"
   );
   useEffect(() => {
@@ -28,17 +16,21 @@ const MainNavbar = () => {
     }, 3000);
 
     return () => clearInterval(intervalId);
-  }, [liliaDescription]);
+  }, [liliaDescription]); */
 
   const onClickNavigation = (sectionSelected: string) => {
     console.log(sectionSelected);
   };
 
   return (
-    <nav role="navigation" aria-label="Main Navigation">
+    <nav
+      role="navigation"
+      aria-label="Main Navigation"
+      className="navbar-envelop"
+    >
       <div className="container navbar-box">
         <div className="navbar-box-owner">
-          <label className="navbar-subtitle">{liliaDescription}</label>
+          <label className="navbar-subtitle">LILIAN CORDOVA</label>
         </div>
         <div className="navbar-box-navigation">
           <ul className="navbar-box-content">
@@ -53,17 +45,9 @@ const MainNavbar = () => {
             <li>
               <button
                 className="navbar-buttons"
-                onClick={() => onClickNavigation("projects")}
+                onClick={() => onClickNavigation("premios")}
               >
-                Projects
-              </button>
-            </li>
-            <li>
-              <button
-                className="navbar-buttons"
-                onClick={() => onClickNavigation("art")}
-              >
-                Art
+                Premios
               </button>
             </li>
             <li>
@@ -72,6 +56,22 @@ const MainNavbar = () => {
                 onClick={() => onClickNavigation("work")}
               >
                 Work
+              </button>
+            </li>
+            <li>
+              <button
+                className="navbar-buttons"
+                onClick={() => onClickNavigation("Art")}
+              >
+                Art
+              </button>
+            </li>
+            <li>
+              <button
+                className="navbar-buttons"
+                onClick={() => onClickNavigation("Proyectos")}
+              >
+                Proyectos
               </button>
             </li>
           </ul>

@@ -1,32 +1,30 @@
-/* MAIN BOX */
-.navbar-box {
+/* BOX ENVELOP */
+.navbar-envelop {
   position: fixed;
+  background-color: beige;
   top: 0;
   width: 100%;
-  background-color: white;
+  align-items: center; /* Esto centra verticalmente el contenido */
+}
+
+/* MAIN BOX */
+.navbar-box {
   display: flex;
-  align-items: center; /* Esto centra verticalmente */
+  width: 85%;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
   z-index: 1000;
+  margin: 0 auto; /* Agrega margen automático a la izquierda y derecha para centrar */
 }
 
 /* OWNER */
 .navbar-box-owner {
-  width: 100%;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  margin-left: 3rem;
+  flex-grow: 1; /* Hace que este elemento crezca y empuje los otros elementos hacia los extremos */
+  text-align: left; /* Alinea el texto a la izquierda */
 }
 
 /* NAVIGATION */
-.navbar-box-navigation {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .navbar-box-content {
   display: flex;
   list-style: none;
@@ -36,21 +34,16 @@
 
 .navbar-buttons {
   border: none;
-  padding: 0.6em 1.2em;
+  margin: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
   background-color: transparent;
-  outline: none !important; /* Elimina el contorno al enfocar */
-  box-shadow: none !important; /* Elimina cualquier sombra al hacer clic */
 }
 
 /* SOCIAL */
 .navbar-box-social {
-  width: 100%;
-  display: flex;
-  justify-content: right;
-  align-items: right;
-  margin-right: 3rem;
+  flex-grow: 1; /* Hace que este elemento crezca y empuje los otros elementos hacia los extremos */
+  text-align: right; /* Alinea el contenido a la derecha */
 }

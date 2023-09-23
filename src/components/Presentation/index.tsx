@@ -1,24 +1,40 @@
-import React from "react";
 import "./index.css";
 import lilianPicture1 from "../../assets/img/lilian1.jpg";
-import lilianPicture2 from "../../assets/img/lilian2.jpg";
+import { useState } from "react";
 
 const Presentation = () => {
+  const [activeCard, setActiveCard] = useState("About");
+
+  const sections = ["About", "Premios", "Trabajo", "Arte", "Proyectos"];
+
+  const hoverCard = (title: string) => {
+    setActiveCard(title);
+  };
+
+  const unhoverCards = () => {
+    setActiveCard("About");
+  };
+
   return (
     <section aria-label="About Section">
       <div className="container presentation-box">
-        <div className="left-image">
-          <img src={lilianPicture1} alt="Imagen 1" />
-        </div>
-        <div className="right-image">
-          <img src={lilianPicture2} alt="Imagen 1" />
-        </div>
-        <div className="text-section">
-          <p>
-            Aquí puedes colocar tu texto. Este espacio está reservado para
-            contenido de texto.
-          </p>
-        </div>
+        {sections.map((title) => {
+          return (
+            <div
+              className={`image-container ${
+                title === activeCard ? "hovered" : ""
+              }`}
+            >
+              <img
+                src={lilianPicture1}
+                alt="Descripción de la imagen"
+                onMouseEnter={() => hoverCard(title)}
+                onMouseLeave={unhoverCards}
+              />
+              <label className="description-text">Your Description Text</label>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

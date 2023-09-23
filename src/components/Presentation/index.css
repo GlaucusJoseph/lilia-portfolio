@@ -1,20 +1,38 @@
 /* MAIN BOX */
 .presentation-box {
   display: flex;
-  justify-content: space-between; /* Espacio entre las imágenes y el texto */
-  align-items: center; /* Centra verticalmente los elementos */
+  align-items: center;
   margin-top: 10rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
-/* Asegura que las imágenes se ajusten al ancho máximo del contenedor */
-.left-image img,
-.right-image img {
-  max-width: 100%;
-  height: auto;
+.image-container {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  width: 20rem;
+  height: 45rem;
+  overflow: hidden;
+  transition: width 0.7s ease;
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%);
 }
 
-/* Estilo adicional según sea necesario */
-.text-section {
-  background-color: white;
-  flex: 1; /* Toma el espacio restante disponible */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container.hovered {
+  width: 30rem;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.description-text {
+  color: white;
+  position: absolute;
+  top: 90%;
+  left: 10%;
 }
